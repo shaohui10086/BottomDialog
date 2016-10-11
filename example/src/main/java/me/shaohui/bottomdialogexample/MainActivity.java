@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void shareDialog() {
         ShareBottomDialog dialog = new ShareBottomDialog();
-        dialog.show(getFragmentManager());
+        dialog.show(getSupportFragmentManager());
     }
 
     private void showDialog() {
-        BottomDialog.create(getFragmentManager())
+        BottomDialog.create(getSupportFragmentManager())
                 .setViewListener(new BottomDialog.ViewListener() {
                     @Override
                     public void bindView(View v) {
