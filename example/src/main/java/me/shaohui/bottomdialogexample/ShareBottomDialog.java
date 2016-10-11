@@ -17,6 +17,6 @@ public class ShareBottomDialog extends BaseBottomDialog{
 
     @Override
     public void bindView(View v) {
-
+        // do any thing you want
     }
 }

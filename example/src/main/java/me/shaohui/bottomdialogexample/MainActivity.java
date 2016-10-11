@@ -34,16 +34,17 @@ public class MainActivity extends AppCompatActivity {
                 .setViewListener(new BottomDialog.ViewListener() {
                     @Override
                     public void bindView(View v) {
-                        abindView(v);
+                        initView(v);
                     }
                 })
                 .setLayoutRes(R.layout.dialog_layout)
-                .setDimAmount(0.0f)
+                .setDimAmount(0.1f)
                 .setCancelOutside(false)
+                .setTag("BottomDialog")
                 .show();
     }
 
-    private void abindView(final View view) {
+    private void initView(final View view) {
         final EditText editText = (EditText) view.findViewById(R.id.edit_text);
         editText.post(new Runnable() {
             @Override
