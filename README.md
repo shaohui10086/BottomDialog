@@ -25,7 +25,9 @@ or Gradle
 
 你可以通过两种不同的方式来使用 `BottomDialog`：
 
-首先说一下第一种方式：直接使用默认的`BottomDialog`, 简单的三行代码就可以搞定
+#### 直接使用`BottomDialog`
+
+简单的三行代码就可以搞定
     
     BottomDialog.create(getSupportFragmentManager())
                     .setLayoutRes(R.layout.dialog_layout)      // dialog layout
@@ -48,7 +50,9 @@ or Gradle
 
 So Easy！
 
-第二种方式就是继承`BaseBottomDialog`
+#### 继承`BaseBottomDialog`
+
+首先根据自己的需求定义一个 Dialog 类，继承`BaseBottomDialog`，比如下方的`ShareBottomDialog`
     
     public class ShareBottomDialog extends BaseBottomDialog{
     
@@ -63,7 +67,8 @@ So Easy！
         }
     }
 
-还是那么简单，只需要实现两个抽象方法就大功告成，剩下的就是添加自己的逻辑。当然，你也可以重写一些必要的方法来满足自己的需求
+还是那么简单，只需要实现两个抽象方法就大功告成，剩下的就是添加自己的逻辑。
+当然，你也可以重写一些必要的方法来满足自己的需求
 
     int getHeight()         // 设置 bottomDialog 的高度
 
@@ -83,8 +88,6 @@ So Easy！
 ## Issue
 
 如果大家在使用的过程中，遇到什么问题，欢迎大家提issue
-
-大
 
 ## License
 
