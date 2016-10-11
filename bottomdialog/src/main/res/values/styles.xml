@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+</resources>

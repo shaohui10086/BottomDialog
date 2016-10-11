@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BottomDialog.iml" filepath="$PROJECT_DIR$/BottomDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bottomdialog/bottomdialog.iml" filepath="$PROJECT_DIR$/bottomdialog/bottomdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+    </modules>
+  </component>
+</project>
