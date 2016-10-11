@@ -1,26 +1,15 @@
 package me.shaohui.bottomdialog;
 
-/**
- * Created by shaohui on 16/10/11.
- */
-
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 
 /**
  * Created by shaohui on 16/10/11.
  */
 
-public class BottomDialog extends DialogFragment {
+public class BottomDialog extends BaseBottomDialog {
 
     private static final String TAG = "bottom_dialog";
 
@@ -53,51 +42,12 @@ public class BottomDialog extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.BottomDialog);
-
         if (savedInstanceState != null) {
             mLayoutRes = savedInstanceState.getInt(KEY_LAYOUT_RES);
             mHeight = savedInstanceState.getInt(KEY_HEIGHT);
             mDimAmount = savedInstanceState.getFloat(KEY_DIM);
             mIsCancelOutside = savedInstanceState.getBoolean(KEY_CANCEL_OUTSIDE);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        getDialog().setCanceledOnTouchOutside(mIsCancelOutside);
-
-        View v = inflater.inflate(mLayoutRes, container, false);
-        if (mViewListener != null) {
-            mViewListener.bindView(v);
-        }
-        return v;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        Window window = getDialog().getWindow();
-        WindowManager.LayoutParams params = window.getAttributes();
-
-        params.dimAmount = mDimAmount;
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
-        if (mHeight > 0) {
-            params.height = mHeight;
-        } else {
-            params.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        }
-        params.gravity = Gravity.BOTTOM;
-
-        window.setAttributes(params);
-    }
-
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return super.onCreateDialog(savedInstanceState);
     }
 
     @Override
@@ -110,17 +60,30 @@ public class BottomDialog extends DialogFragment {
         super.onSaveInstanceState(outState);
     }
 
-    private void setFragmentManager(FragmentManager manager) {
-        mFragmentManager = manager;
+    @Override
+    public void bindView(View v) {
+        if (mViewListener != null) {
+            mViewListener.bindView(v);
+        }
     }
 
-    public BottomDialog setLayoutRes(@LayoutRes int layoutRes) {
-        mLayoutRes = layoutRes;
+    @Override
+    public int getLayoutRes() {
+        return mLayoutRes;
+    }
+
+    public BottomDialog setFragmentManager(FragmentManager manager) {
+        mFragmentManager = manager;
         return this;
     }
 
     public BottomDialog setViewListener(ViewListener listener) {
         mViewListener = listener;
+        return this;
+    }
+
+    public BottomDialog setLayoutRes(@LayoutRes int layoutRes) {
+        mLayoutRes = layoutRes;
         return this;
     }
 
@@ -144,13 +107,12 @@ public class BottomDialog extends DialogFragment {
         return this;
     }
 
-    public BottomDialog show() {
-        show(mFragmentManager, mTag);
-        return this;
-    }
-
     public interface ViewListener {
         void bindView(View v);
     }
 
+    public BaseBottomDialog show() {
+        show(mFragmentManager, getTag());
+        return this;
+    }
 }

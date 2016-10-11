@@ -19,21 +19,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog();
+                //shareDialog();
             }
         });
     }
 
+    private void shareDialog() {
+        ShareBottomDialog dialog = new ShareBottomDialog();
+        dialog.show(getFragmentManager());
+    }
+
     private void showDialog() {
         BottomDialog.create(getFragmentManager())
-                .setLayoutRes(R.layout.dialog_layout)
-                .setDimAmount(0.0f)
-                .setCancelOutside(false)
                 .setViewListener(new BottomDialog.ViewListener() {
                     @Override
                     public void bindView(View v) {
                         abindView(v);
                     }
                 })
+                .setLayoutRes(R.layout.dialog_layout)
+                .setDimAmount(0.0f)
+                .setCancelOutside(false)
                 .show();
     }
 
