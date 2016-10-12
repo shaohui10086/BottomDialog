@@ -26,7 +26,7 @@ or Gradle
 
 你可以通过两种不同的方式来使用 `BottomDialog`：
 
-#### 直接使用`BottomDialog`
+### 直接使用`BottomDialog`
 
 简单的三行代码就可以搞定
     
@@ -51,7 +51,7 @@ or Gradle
 
 So Easy！
 
-#### 继承`BaseBottomDialog`
+### 继承`BaseBottomDialog`
 
 首先根据自己的需求定义一个 Dialog 类，继承`BaseBottomDialog`，比如下方的`ShareBottomDialog`
     
@@ -71,13 +71,13 @@ So Easy！
 还是那么简单，只需要实现两个抽象方法就大功告成，剩下的就是添加自己的逻辑。
 当然，你也可以重写一些必要的方法来满足自己的需求
 
-    int getHeight()         // 设置 bottomDialog 的高度
+    int getHeight()                 // 设置 bottomDialog 的高度
 
-    float getDimAmount()    // 设置 dialog 所在 window 的背景深度，默认0.2f
+    float getDimAmount()            // 设置 dialog 所在 window 的背景深度，默认0.2f
 
     boolean getCancelOutside()      // 设置 dialog 点击外部区域是否消失
 
-    String getFragmentTag()        // 设置 dialogFragment 的 tag
+    String getFragmentTag()         // 设置 dialogFragment 的 tag
 
 调用方法：
 
