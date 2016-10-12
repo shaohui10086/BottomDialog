@@ -66,19 +66,19 @@ public abstract class BaseBottomDialog extends DialogFragment {
         window.setAttributes(params);
     }
 
-    private int getHeight() {
+    public int getHeight() {
         return -1;
     }
 
-    private float getDimAmount() {
+    public float getDimAmount() {
         return DEFAULT_DIM;
     }
 
-    private boolean getCancelOutside() {
+    public boolean getCancelOutside() {
         return true;
     }
 
-    private String getFragmentTag() {
+    public String getFragmentTag() {
         return TAG;
     }
 
