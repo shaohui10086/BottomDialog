@@ -6,6 +6,7 @@
 
 ## Preview
 ![BottomDialogShare](/preview/bottom_dialog_share.gif)
+![BottomDialogShare](/preview/bottom_dialog_edit.gif)
 ## Import
 
 Maven
@@ -13,13 +14,13 @@ Maven
     <dependency>
       <groupId>me.shaohui</groupId>
       <artifactId>bottomdialog</artifactId>
-      <version>1.1.1</version>
+      <version>1.1.6</version>
       <type>pom</type>
     </dependency>
     
 or Gradle
 
-	compile 'com.github.shaohui10086:BottomDialog:1.1.6'
+	compile 'me.shaohui:bottomdialog:1.1.6'
 
 ## Uasge
 
