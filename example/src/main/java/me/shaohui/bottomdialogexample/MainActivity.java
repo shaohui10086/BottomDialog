@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog();
-                //shareDialog();
+                //showDialog();
+                shareDialog();
             }
         });
     }
@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView(final View view) {
-        final EditText editText = (EditText) view.findViewById(R.id.edit_text);
-        editText.post(new Runnable() {
-            @Override
-            public void run() {
-                InputMethodManager inputMethodManager =
-                        (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputMethodManager.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
-            }
-        });
+        //final EditText editText = (EditText) view.findViewById(R.id.edit_text);
+        //editText.post(new Runnable() {
+        //    @Override
+        //    public void run() {
+        //        InputMethodManager inputMethodManager =
+        //                (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        //        inputMethodManager.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
+        //    }
+        //});
         //editText.setText("Hello world");
     }
 }

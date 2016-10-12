@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black">
-        <EditText
-                android:id="@+id/edit_text"
+        >
+
+        <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                />
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="click"
-                />
-</LinearLayout>
+                android:layout_alignParentBottom="true"
+                android:background="#CC000000"
+                android:layout_height="140dp"
+                >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="分享到"
+                        android:textSize="13sp"
+                        android:layout_marginTop="23dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="80dp"
+                        >
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/mRlWechat"
+                                android:layout_weight="1"
+                                >
+
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@mipmap/share_wechat_solid"
+                                        />
+
+                                <TextView
+                                        android:textSize="13sp"
+                                        android:gravity="center"
+                                        android:textColor="#CCFFFFFF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="17dp"
+                                        android:text="微信"
+                                        />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/mRlWeixinCircle"
+                                android:layout_weight="1"
+                                >
+
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@mipmap/share_weixin_friends_solid"
+                                        />
+
+                                <TextView
+                                        android:textSize="13sp"
+                                        android:gravity="center"
+                                        android:textColor="#CCFFFFFF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="17dp"
+                                        android:text="朋友圈"
+                                        />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/mRlWeibo"
+                                android:layout_weight="1"
+                                >
+
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@mipmap/share_weibo_solid"
+                                        />
+
+                                <TextView
+                                        android:textSize="13sp"
+                                        android:gravity="center"
+                                        android:textColor="#CCFFFFFF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="17dp"
+                                        android:text="微博"
+                                        />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/mRlQQ"
+                                android:layout_weight="1"
+                                >
+
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@mipmap/share_qq_solid"
+                                        />
+
+                                <TextView
+                                        android:textSize="13sp"
+                                        android:gravity="center"
+                                        android:textColor="#CCFFFFFF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="17dp"
+                                        android:text="QQ"
+                                        />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/mRlQzone"
+                                android:layout_weight="1"
+                                >
+
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@mipmap/share_qqzone_solid"
+                                        />
+
+                                <TextView
+                                        android:textSize="13sp"
+                                        android:gravity="center"
+                                        android:textColor="#CCFFFFFF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="17dp"
+                                        android:text="QQ空间"
+                                        />
+                        </RelativeLayout>
+                </LinearLayout>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>
