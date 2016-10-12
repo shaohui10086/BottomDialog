@@ -26,7 +26,7 @@ or Gradle
 
 你可以通过两种不同的方式来使用 `BottomDialog`：
 
-### 直接使用`BottomDialog`
+### 1.直接使用 `BottomDialog`
 
 简单的三行代码就可以搞定
     
@@ -51,7 +51,7 @@ or Gradle
 
 So Easy！
 
-### 继承`BaseBottomDialog`
+### 2.继承 `BaseBottomDialog` 使用
 
 首先根据自己的需求定义一个 Dialog 类，继承`BaseBottomDialog`，比如下方的`ShareBottomDialog`
     
