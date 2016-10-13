@@ -11,8 +11,6 @@ import android.view.View;
 
 public class BottomDialog extends BaseBottomDialog {
 
-    private static final String TAG = "bottom_dialog";
-
     private static final String KEY_LAYOUT_RES = "bottom_layout_res";
     private static final String KEY_HEIGHT = "bottom_height";
     private static final String KEY_DIM = "bottom_dim";
@@ -20,16 +18,16 @@ public class BottomDialog extends BaseBottomDialog {
 
     private FragmentManager mFragmentManager;
 
-    private boolean mIsCancelOutside = true;
+    private boolean mIsCancelOutside = super.getCancelOutside();
+
+    private String mTag = super.getFragmentTag();
+
+    private float mDimAmount = super.getDimAmount();
+
+    private int mHeight = super.getHeight();
 
     @LayoutRes
     private int mLayoutRes;
-
-    private String mTag = TAG;
-
-    private float mDimAmount = 0.2f;
-
-    private int mHeight;
 
     private ViewListener mViewListener;
 
@@ -105,6 +103,26 @@ public class BottomDialog extends BaseBottomDialog {
     public BottomDialog setHeight(int heightPx) {
         mHeight = heightPx;
         return this;
+    }
+
+    @Override
+    public float getDimAmount() {
+        return mDimAmount;
+    }
+
+    @Override
+    public int getHeight() {
+        return mHeight;
+    }
+
+    @Override
+    public boolean getCancelOutside() {
+        return mIsCancelOutside;
+    }
+
+    @Override
+    public String getFragmentTag() {
+        return mTag;
     }
 
     public interface ViewListener {

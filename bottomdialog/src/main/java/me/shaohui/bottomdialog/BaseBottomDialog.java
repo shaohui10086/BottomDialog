@@ -83,6 +83,6 @@ public abstract class BaseBottomDialog extends DialogFragment {
     }
 
     public void show(FragmentManager fragmentManager) {
-        show(fragmentManager, TAG);
+        show(fragmentManager, getFragmentTag());
     }
 }
