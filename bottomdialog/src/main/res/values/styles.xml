@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="BottomDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowTitleStyle">@null</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
