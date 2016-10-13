@@ -1,5 +1,5 @@
 # BottomDialog
-[![build](https://img.shields.io/badge/build-1.1.8-brightgreen.svg?maxAge=2592000)](https://bintray.com/shaohui/maven/BottomDialog)
+[![build](https://img.shields.io/badge/build-1.1.9-brightgreen.svg?maxAge=2592000)](https://bintray.com/shaohui/maven/BottomDialog)
 [![license](https://img.shields.io/badge/license-Apache%202-blue.svg?maxAge=2592000)](https://github.com/shaohui10086/BottomDialog/blob/master/LICENSE)
 
 `BottomDialog` 是一个通过 `DialogFragment` 实现的底部弹窗布局，并且支持弹出动画，支持任意布局
@@ -14,13 +14,13 @@ Maven
     <dependency>
       <groupId>me.shaohui</groupId>
       <artifactId>bottomdialog</artifactId>
-      <version>1.1.8</version>
+      <version>1.1.9</version>
       <type>pom</type>
     </dependency>
     
 or Gradle
 
-	compile 'me.shaohui:bottomdialog:1.1.8'
+	compile 'me.shaohui:bottomdialog:1.1.9'
 
 ## Uasge
 
