@@ -130,7 +130,7 @@ public class BottomDialog extends BaseBottomDialog {
     }
 
     public BaseBottomDialog show() {
-        show(mFragmentManager, getTag());
+        show(mFragmentManager);
         return this;
     }
 }
