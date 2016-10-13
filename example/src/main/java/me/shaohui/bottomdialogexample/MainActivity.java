@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void shareDialog() {
-        ShareBottomDialog dialog = new ShareBottomDialog();
+        //ShareBottomDialog dialog = new ShareBottomDialog();
+        //dialog.show(getSupportFragmentManager());
+        EditTextDialog dialog = new EditTextDialog();
         dialog.show(getSupportFragmentManager());
     }
 

@@ -51,7 +51,7 @@ or Gradle
 
 So Easy！
 
-### 2.继承 `BaseBottomDialog` 使用
+### 2.或者继承 `BaseBottomDialog` 使用
 
 首先根据自己的需求定义一个 Dialog 类，继承`BaseBottomDialog`，比如下方的`ShareBottomDialog`
     
