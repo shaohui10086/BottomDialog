@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //showDialog();
-                shareDialog();
+                showDialog();
+                //shareDialog();
+
             }
         });
     }
@@ -40,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .setLayoutRes(R.layout.dialog_layout)
-                .setDimAmount(0.1f)
-                .setCancelOutside(false)
+                .setDimAmount(0.9f)
                 .setTag("BottomDialog")
                 .show();
     }

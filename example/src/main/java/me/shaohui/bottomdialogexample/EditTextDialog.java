@@ -33,6 +33,11 @@ public class EditTextDialog extends BaseBottomDialog {
     }
 
     @Override
+    public float getDimAmount() {
+        return 0.9f;
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
     }
