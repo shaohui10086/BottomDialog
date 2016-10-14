@@ -1,7 +1,10 @@
 # BottomDialog
 [![build](https://img.shields.io/badge/build-1.1.9-brightgreen.svg?maxAge=2592000)](https://bintray.com/shaohui/maven/BottomDialog)
 [![license](https://img.shields.io/badge/license-Apache%202-blue.svg?maxAge=2592000)](https://github.com/shaohui10086/BottomDialog/blob/master/LICENSE)
+
 [中文版](/README_ZH.md)
+
+
 `BottomDialog` is a bottom dialog layout implemented with `DialogFragment`，And supports pop-up animation, support any layout
 
 ## Preview
@@ -44,7 +47,7 @@ Of course, you can also make simple settings:
                         }
                     })
                     .setLayoutRes(R.layout.dialog_layout)  
-                    .setDimAmount(0.1f)            // Dialog window dim amount range：0 to 1，default is : 0.2f
+                    .setDimAmount(0.1f)            // Dialog window dim amount(can change window background color）, range：0 to 1，default is : 0.2f
                     .setCancelOutside(false)     // click the external area whether is closed, default is : true
                     .setTag("BottomDialog")     // setting the DialogFragment tag
                     .show();
@@ -70,13 +73,13 @@ First of all, according to your needs to define a class，extends `BaseBottomDia
 
 So simple, only two abstract methods needed to achieve, the rest is to add your logic. Of course, you can also rewrite some of the necessary methods to meet your needs, You can manipulate this Dialog as you would a Fragment
 
-    int getHeight()                 // 设置 bottomDialog 的高度
+    int getHeight()                 // return your bottomDialog height
 
-    float getDimAmount()            // 设置 dialog 所在 window 的背景深度，默认0.2f
+    float getDimAmount()            // set dialog dim amount（can change window background color）, default is 0.2f
 
-    boolean getCancelOutside()      // 设置 dialog 点击外部区域是否消失
+    boolean getCancelOutside()      // click the external area whether is closed, default is : true
 
-    String getFragmentTag()         // 设置 dialogFragment 的 tag
+    String getFragmentTag()         // set dialogFragment tag
 
 The rest is use it：
 
