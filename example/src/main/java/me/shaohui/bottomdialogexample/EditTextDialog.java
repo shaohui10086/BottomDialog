@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
 import me.shaohui.bottomdialog.BaseBottomDialog;
 
 /**
@@ -11,6 +12,10 @@ import me.shaohui.bottomdialog.BaseBottomDialog;
  */
 
 public class EditTextDialog extends BaseBottomDialog {
+    @Override
+    public View getDialogView() {
+        return null;
+    }
 
     private EditText mEditText;
 
