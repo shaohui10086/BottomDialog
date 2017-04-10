@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BottomDialog.iml" filepath="$PROJECT_DIR$/BottomDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BottomDialog.iml" filepath="$PROJECT_DIR$/BottomDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/bottomdialog/bottomdialog.iml" filepath="$PROJECT_DIR$/bottomdialog/bottomdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bottomdialog/bottomdialog.iml" filepath="$PROJECT_DIR$/bottomdialog/bottomdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
     </modules>
   </component>

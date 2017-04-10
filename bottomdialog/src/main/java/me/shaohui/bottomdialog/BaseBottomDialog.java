@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 /**
  * Created by shaohui on 16/10/11.
@@ -33,17 +34,26 @@ public abstract class BaseBottomDialog extends DialogFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(getCancelOutside());
-
-        View v = inflater.inflate(getLayoutRes(), container, false);
+        View v;
+        if (getDialogView() != null) {
+            v = inflater.inflate(R.layout.layout, container, false);
+            FrameLayout layout = ((FrameLayout) v.findViewById(R.id.root));
+            layout.addView(getDialogView());
+        } else {
+            v = inflater.inflate(getLayoutRes(), container, false);
+            bindView(v);
+        }
         bindView(v);
         return v;
     }
 
     @LayoutRes
     public abstract int getLayoutRes();
+
+    public abstract View getDialogView();
 
     public abstract void bindView(View v);
 

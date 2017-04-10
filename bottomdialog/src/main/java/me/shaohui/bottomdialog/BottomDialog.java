@@ -28,7 +28,7 @@ public class BottomDialog extends BaseBottomDialog {
 
     @LayoutRes
     private int mLayoutRes;
-
+    private View mView;
     private ViewListener mViewListener;
 
     public static BottomDialog create(FragmentManager manager) {
@@ -50,7 +50,10 @@ public class BottomDialog extends BaseBottomDialog {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
+        if (mLayoutRes != 0) {
+
         outState.putInt(KEY_LAYOUT_RES, mLayoutRes);
+        }
         outState.putInt(KEY_HEIGHT, mHeight);
         outState.putFloat(KEY_DIM, mDimAmount);
         outState.putBoolean(KEY_CANCEL_OUTSIDE, mIsCancelOutside);
@@ -123,6 +126,17 @@ public class BottomDialog extends BaseBottomDialog {
     @Override
     public String getFragmentTag() {
         return mTag;
+    }
+
+    @Override
+    public View getDialogView() {
+        return mView;
+    }
+
+    public BottomDialog setDialogView(View view) {
+//        getParentFragment().getFragmentManager().set
+        mView = view;
+        return this;
     }
 
     public interface ViewListener {
